@@ -6,7 +6,7 @@ kuisBaru(){return {id:this.id(),judul:'Kuis Baru',soal:[this.baru()]};},
 async semua(){let raw=null;try{raw=localStorage.getItem(this.K);}catch(e){}
 if(raw!==null){try{const s=JSON.parse(raw);if(Array.isArray(s))return s.map(k=>({id:k.id,judul:k.judul||'',main:k.main||0,terakhir:k.terakhir||0,soal:k.soal.map(q=>this.norm(q))}));}catch(e){}}
 let lama=null;try{lama=JSON.parse(localStorage.getItem('tebakseru-soal'));}catch(e){}
-if(!Array.isArray(lama)||!lama.length)lama=await (await fetch('data/soal-contoh.json')).json();
+if(!Array.isArray(lama)||!lama.length)lama=await (await fetch('soal-contoh.json')).json();
 const k=[{id:this.id(),judul:'Contoh Kuis',soal:lama.map(q=>this.norm(q))}];this.simpanSemua(k);return k;},
 async catat(id){const a=await this.semua(),k=a.find(x=>x.id===id);if(k){k.main=(k.main||0)+1;k.terakhir=Date.now();this.simpanSemua(a);}},
 simpanSemua(a){try{localStorage.setItem(this.K,JSON.stringify(a));}catch(e){}},

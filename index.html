@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Tebak Seru</title><link rel="manifest" href="manifest.json">
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.5.4/peerjs.min.js"></script></head><body><div id="kontrol" hidden><button id="bMute" onclick="App.mute()">🔊</button><input type="range" id="vol" min="0" max="100" value="60" oninput="Suara.vol=this.value/100"><label><input type="checkbox" id="cAuto" onchange="App.setAuto(this.checked)"> Lanjut otomatis</label><button onclick="App.lewati()">Lewati ⏭</button><button onclick="App.akhirGame()">Akhiri ■</button></div><div id="putus" hidden>⚠ Terputus, menyambung ulang...</div><button id="pMute" hidden onclick="App.pmute()">🔊</button><div class="bg" id="bgT"></div><div id="float"></div><div id="reaksi" hidden></div><main>
 <section id="s-menu" class="v">
 <div class="logo"><div class="ikon">⭐</div><h1>Tebak Seru</h1><p class="sub">Kuis seru bersama keluarga<br><small>dibuat untuk Kenzie &amp; Shaqeel</small></p></div>
@@ -38,4 +38,4 @@
 <section id="p-hasil" class="v" hidden><h1 id="verdik"></h1><p id="info"></p><p id="kunciP"></p><div id="mkP"></div></section>
 <section id="p-akhir" class="v" hidden><h1 id="akhirT"></h1><p id="akhirI"></p><div id="mkA"></div></section>
 </main>
-<script src="js/soal.js"></script><script src="js/skor.js"></script><script src="js/suara.js"></script><script src="js/koneksi.js"></script><script src="js/app.js"></script><script src="js/avatar.js"></script><script src="js/reaksi.js"></script><script src="js/tema.js"></script><script src="js/baca.js"></script><script src="js/maskot.js"></script><script src="js/minigame/mini.js"></script><script src="js/minigame/memori.js"></script><script src="js/minigame/hitung.js"></script><script src="js/pr.js"></script><script src="js/laporan.js"></script><script src="js/pustaka.js"></script><script src="js/editor-soal.js"></script></body></html>
+<script src="soal.js"></script><script src="skor.js"></script><script src="suara.js"></script><script src="koneksi.js"></script><script src="app.js"></script><script src="avatar.js"></script><script src="reaksi.js"></script><script src="tema.js"></script><script src="baca.js"></script><script src="maskot.js"></script><script src="mini.js"></script><script src="memori.js"></script><script src="hitung.js"></script><script src="pr.js"></script><script src="laporan.js"></script><script src="pustaka.js"></script><script src="editor-soal.js"></script></body></html>
