@@ -25,9 +25,9 @@ if(t!==q.tipe){const isi=q.tipe==='bs'?[]:q.opsi.filter(x=>x),b=q.benar[0]??0;q.
 if(t==='bs'){q.opsi=['Benar','Salah'];q.benar=[b>1?0:b];}else if(q.opsi.length<4){q.opsi=[...isi,'','','',''].slice(0,4);q.benar=[0];}else q.benar=[b];}
 this.simpan();this.gambar();},
 unggah(f){if(!f||!f.type.startsWith('image/'))return;const im=new Image(),u=URL.createObjectURL(f);
-im.onload=()=>{const r=Math.min(1,640/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*r;c.height=im.height*r;
+im.onload=()=>{const r=Math.min(1,480/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*r;c.height=im.height*r;
 const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);
-this.q().gambar=c.toDataURL('image/jpeg',.72);this.simpan();this.gambar();};im.src=u;},
+this.q().gambar=c.toDataURL('image/jpeg',.62);this.simpan();this.gambar();};im.src=u;},
 drop(e){e.preventDefault();this.unggah(e.dataTransfer.files[0]);},
 hapusGbr(){delete this.q().gambar;this.simpan();this.gambar();},
 ekspor(){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify({judul:this.k.judul,soal:this.s},null,1)],{type:'application/json'}));a.download='soal-tebak-seru.json';a.click();}};
