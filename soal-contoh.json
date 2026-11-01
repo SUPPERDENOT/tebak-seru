@@ -1,0 +1,4 @@
+[{"tanya":"2 + 3 = ?","opsi":["4","5","6","7"],"benar":1,"waktu":15},
+{"tanya":"Kucing punya 4 kaki.","opsi":["Benar","Salah"],"benar":0,"waktu":10},
+{"tanya":"Hewan apa yang bisa terbang?","opsi":["Ikan","Kuda","Burung","Sapi"],"benar":2,"waktu":15},
+{"tanya":"Matahari terbit dari barat.","opsi":["Benar","Salah"],"benar":1,"waktu":10}]
