@@ -11,3 +11,6 @@ pasang(i,simpan){i=this.L[i]?i:0;this.i=i;const t=this.L[i],r=document.documentE
 $('#bgT').innerHTML=Array.from({length:8},(_,k)=>`<i style="left:${4+k*12}%;animation-delay:-${k*1.7}s">${t.e[k%t.e.length]}</i>`).join('');
 $('#cTema').value=i;if(simpan){try{localStorage.setItem('tebakseru-tema',i);}catch(e){}}}};
 Tema.muat();
+Tema.buka=function(){show('s-tema');this.daftar();};
+Tema.daftar=function(){$('#temaIsi').innerHTML=this.L.map((t,i)=>`<div class="kartu tc ${i==this.i?'on':''}" style="background:${t.bg}"><div class="em">${t.e.slice(0,4).join(' ')}</div><h3>${t.n}</h3><button class="big" onclick="Tema.pilih(${i})">${i==this.i?'Dipakai ✓':'Pakai'}</button></div>`).join('');};
+Tema.pilih=function(i){this.pasang(i,true);this.daftar();};

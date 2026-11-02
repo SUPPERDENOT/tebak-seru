@@ -13,7 +13,7 @@ this.o.forEach(b=>b.x-=this.sp*dt);this.o=this.o.filter(b=>b.x>-40);
 if(this.o.some(b=>b.x<80&&b.x+24>50&&this.y<30))return this.akhir();
 this.gambar();$('#dS').textContent=Math.floor(this.s);this.r=requestAnimationFrame(t2=>this.loop(t2));},
 gambar(){const x=this.x,g=160;x.fillStyle='#fff7e6';x.fillRect(0,0,this.W,this.H);x.fillStyle='#1f2a5c';x.fillRect(0,g,this.W,3);
-x.font='38px serif';x.textBaseline='bottom';x.fillText('🦖',40,g-this.y);this.o.forEach(b=>x.fillText('🌵',b.x,g));},
+x.font='38px serif';x.textBaseline='bottom';x.save();x.translate(80,g-this.y);x.scale(-1,1);x.fillText('🦖',0,0);x.restore();this.o.forEach(b=>x.fillText('🌵',b.x,g));},
 akhir(){this.stop();const k=Math.floor(this.s);Suara.salah();Mini.rekor('dino',k,false);
 $('#gArea').innerHTML=`<h2>Tertabrak kaktus! 🌵</h2><p>Skor kamu: <b>${k}</b> (terbaik: ${Mini.best('dino')})</p><div id="mkG"></div><button class="big" onclick="Dino.mulai()">Main lagi</button>`;Maskot.pasang('#mkG',k>=30?'benar':'ikut');}};
 Mini.L.dino=Dino;

@@ -158,3 +158,9 @@ canvas.dino{width:100%;max-width:640px;border-radius:14px;touch-action:manipulat
 #s-edit .med.kosong .plus{margin:0;width:40px;height:40px;line-height:40px;font-size:1.5rem;flex:none}#s-edit .med p{margin:2px 0;font-size:.9rem}#s-edit .med img{max-height:110px}
 #s-edit #eOpsi .o{min-height:72px}#s-edit #eTanya{min-height:0}
 @media(max-width:900px){#s-edit .eBody,#s-edit .eBody.pp{display:block;overflow-y:auto}#s-edit #dftSoal{height:auto;flex-direction:row;overflow-x:auto;overflow-y:hidden}#s-edit .eTengah,#s-edit .prop{height:auto;overflow:visible}#s-edit .eKanan{height:auto}}
+.tc{color:#fff;text-align:center;margin:0}.tc.on{outline:4px solid var(--kuning)}.tc .em{font-size:2rem}.tc h3{margin:.3em 0}
+#eWarn{background:#e84545;color:#fff;border-radius:10px;padding:8px 12px;margin-bottom:8px;font-weight:800}#eWarn[hidden]{display:none}
+.thumb.rusak .kt{border-color:#e84545}.thumb.rusak .tl::after{content:' ⚠'}
+.ketikinfo{grid-column:1/-1;font-size:2rem;background:#2d3a78;border-radius:22px;padding:40px;text-align:center}
+#pKetikBox{margin:12px 0}#pKetik{font-size:1.6rem}.ketikin{width:100%;font-size:1.3rem;padding:14px;border:0;border-radius:12px;color:var(--malam);text-align:left;margin:6px 0}
+.catatan{font-size:.9rem;opacity:.85;margin:4px 0}
