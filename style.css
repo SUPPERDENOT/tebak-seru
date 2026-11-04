@@ -164,3 +164,32 @@ canvas.dino{width:100%;max-width:640px;border-radius:14px;touch-action:manipulat
 .ketikinfo{grid-column:1/-1;font-size:2rem;background:#2d3a78;border-radius:22px;padding:40px;text-align:center}
 #pKetikBox{margin:12px 0}#pKetik{font-size:1.6rem}.ketikin{width:100%;font-size:1.3rem;padding:14px;border:0;border-radius:12px;color:var(--malam);text-align:left;margin:6px 0}
 .catatan{font-size:.9rem;opacity:.85;margin:4px 0}
+.timbar{display:flex;gap:10px;margin:8px 0}.timbar div{flex:1;border-radius:14px;padding:10px;color:#fff;font-weight:800;text-align:center}.timbar b{display:block;font-size:1.8rem}
+.timchip{display:inline-block;padding:6px 14px;border-radius:99px;font-weight:800;color:#fff;margin:6px 0}.timchip:empty{display:none}#timP{font-weight:800}
+button.o{position:relative}button.o[data-no]:not([data-no=""])::after{content:attr(data-no);position:absolute;top:6px;right:8px;background:#fff;color:var(--malam);border-radius:50%;width:30px;height:30px;font-size:1.1rem;line-height:30px;text-align:center}
+#eInfo{background:#1368ce;color:#fff;border-radius:10px;padding:8px 12px;margin-bottom:8px;font-weight:800}#eInfo[hidden]{display:none}
+.lobiaksi{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:12px 0}.lobiaksi button{padding:10px 14px;background:#2d3a78;color:var(--krem);font-size:1rem}
+.lobiaksi .big{width:100%;background:var(--jeruk);color:var(--malam);font-size:1.3rem}.lobiaksi button:disabled,#lobiTim button:disabled{opacity:.45}
+#lobiTim .duo2{display:flex;gap:8px;justify-content:center}#lobiTim button{padding:10px 14px;background:#2d3a78;color:var(--krem)}#lobiTim button.on{outline:4px solid var(--kuning)}
+#p-tunggu{padding-bottom:90px}
+#modal{position:fixed;inset:0;background:#0008;display:flex;align-items:center;justify-content:center;z-index:40}#modal[hidden],#toast[hidden]{display:none}
+.mbox{background:var(--krem);color:var(--malam);border-radius:18px;padding:16px;max-width:420px;width:90%;max-height:80vh;overflow:auto;text-align:left}.mbox h3{margin:0 0 8px}
+.brs{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #0002}.brs span{margin-left:auto;font-weight:800}
+#toast{position:fixed;top:60px;left:50%;transform:translateX(-50%);background:#000b;color:#fff;padding:8px 16px;border-radius:99px;z-index:50;font-weight:800}
+.coret{background:#fff;border-radius:14px;touch-action:none;width:100%;max-width:340px;display:block;margin:8px auto}#gPal button{border-radius:50%;border:2px solid #fff6}#gPal button.on{outline:4px solid var(--kuning)}
+#siapInfo,#btnDaftarSiap{grid-column:1;margin:0}#btnDaftarSiap{justify-self:start}
+.pengaturan{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px;max-width:none;width:100%}
+.pengaturan label{flex-wrap:nowrap;text-align:left;font-size:.88rem;align-items:flex-start;line-height:1.2}.pengaturan input[type=checkbox]{flex:none;margin-top:1px}
+.pengaturan select{max-width:110px;font-size:.85rem}.pengaturan small{grid-column:1/-1}
+#kode{font-size:clamp(3.5rem,8vw,6.5rem)}
+body.host #s-lobi:not([hidden]){grid-template-columns:1fr 450px;grid-template-rows:repeat(6,auto) 1fr;align-content:start}
+@media(min-width:821px){#s-lobi .pengaturan{grid-row:3/8;align-self:start}#s-lobi>.big{grid-row:8;position:sticky;bottom:10px;z-index:3}}
+@media(max-width:820px){body.host #s-lobi:not([hidden]){grid-template-columns:1fr;grid-template-rows:none}.pengaturan{grid-template-columns:1fr}}
+#imTeks{width:100%;min-height:220px;font:14px/1.4 ui-monospace,Consolas,monospace;border-radius:12px;border:0;padding:12px;color:var(--malam);text-align:left}
+.imw{background:#e84545;color:#fff;border-radius:12px;padding:8px 12px;margin:8px 0;text-align:left;font-size:.9rem}.imq{background:#2d3a78;border-radius:10px;padding:8px 12px;margin:6px 0;text-align:left}.imq small{opacity:.7;margin-right:6px}.imq .bad{color:var(--kuning)}
+.imtombol{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.imtombol button,.imtombol label{padding:8px 14px;background:#2d3a78;color:var(--krem);border-radius:12px;font-weight:800;cursor:pointer}
+#pfPilih{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px 0}#pfPilih button{padding:8px 18px;background:#2d3a78;color:var(--krem);font-size:1.1rem}#pfPilih button.on{outline:4px solid var(--kuning)}
+.stat.pf{grid-template-columns:repeat(auto-fit,minmax(130px,1fr))}.lcgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.lc{background:var(--krem);color:var(--malam);border-radius:14px;padding:10px;text-align:center}.lc span{font-size:2.2rem;display:block}.lc small{display:block;opacity:.75;font-size:.75rem;margin-top:2px}.lc.kunci{opacity:.45;filter:grayscale(1)}
+#prKetik{margin:12px 0}#prKi{font-size:1.5rem}
+.lapTab{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.lapTab button{padding:8px 14px;background:#2d3a78;color:var(--krem);font-size:.95rem}.lapTab button.on{background:var(--jeruk);color:var(--malam)}

@@ -6,6 +6,8 @@ tik(){this.pip(660,.12);},mulai(){[523,659,784].forEach((f,i)=>this.pip(f,.18,i*
 selesai(){[784,659,523,659,784,1047].forEach((f,i)=>this.pip(f,.22,i*.14));},
 musik(ms=240){this.stop();const B=[110,110,130.8,110,98,98,123.5,98],L=[0,440,0,523.3,0,466.2,0,415.3];
 this.lp=setInterval(()=>{const i=this.st++%8;this.pip(B[i],ms/1000*.9,0,'sawtooth',.16);if(L[i])this.pip(L[i],.09,0,'square',.07);if(i%2==0)this.pip(1760,.03,0,'square',.04);},ms);},
+lobi(){this.stopLobi();const N=[392,440,523,587,659,784];this.ll=setInterval(()=>{this.pip(N[Math.random()*N.length|0],.7,0,'sine',.12);},650);},
+stopLobi(){clearInterval(this.ll);this.ll=null;},
 stop(){clearInterval(this.lp);this.lp=null;},
 buka(){try{this.ctx=this.ctx||new (window.AudioContext||window.webkitAudioContext)();this.ctx.resume();}catch(e){}},
 klik(){this.pip(900,.05,0,'square',.08);},

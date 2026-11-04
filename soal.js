@@ -12,6 +12,7 @@ async catat(id){const a=await this.semua(),k=a.find(x=>x.id===id);if(k){k.main=(
 simpanSemua(a){try{localStorage.setItem(this.K,JSON.stringify(a));}catch(e){}},
 cocok(q,t){const n=s=>String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();return (q.kunci||[]).some(k=>n(k)===n(t));},
 masalah(q){if(!q.tanya.trim())return q.tipe==='slide'?'Judul slide masih kosong':'Pertanyaan masih kosong';if(q.tipe==='slide')return '';
+if(q.tipe==='poll'||q.tipe==='urut')return q.opsi.some(o=>!o.trim())?'Ada pilihan yang kosong':'';
 if(q.tipe==='ketik')return (q.kunci||[]).some(k=>k.trim())?'':'Isi minimal satu jawaban yang benar';
 if(q.opsi.some(o=>!o.trim()))return 'Ada pilihan jawaban yang kosong';if(!q.benar.length)return 'Belum ada jawaban benar';return '';},
 rusak(s){return s.map((q,i)=>this.masalah(q)?i:-1).filter(i=>i>=0);},
